@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="my-4">ToDo Dashboard</h1>
+        
+        <div class="list-group mb-4">
+            <a href="{% url 'pending-list-ids' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes (solo IDs)
+            </a>
+            <a href="{% url 'pending-list-ids-titles' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes (IDs y Titles)
+            </a>
+            <a href="{% url 'pending-list-unresolved' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes sin resolver (ID y Title)
+            </a>
+            <a href="{% url 'pending-list-resolved' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes resueltos (ID y Title)
+            </a>
+            <a href="{% url 'pending-list-ids-users' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes (IDs y userID)
+            </a>
+            <a href="{% url 'pending-list-resolved-ids-users' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes resueltos (ID y userID)
+            </a>
+            <a href="{% url 'pending-list-unresolved-ids-users' %}" class="list-group-item list-group-item-action">
+                Lista de todos los pendientes sin resolver (ID y userID)
+            </a>
+        </div>
+
+          <h2><a href="{% url 'pending-create' %}">Crear Nuevo Pendiente</a></h2>
+          <br>
+          <h2><a href="{% url 'apis-index' %}">Visualizar APIS</a></h2>
+    </div>
+</body>
+</html>

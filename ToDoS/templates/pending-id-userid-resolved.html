@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pending List</title>
+</head>
+<body>
+    <h1>Pending List</h1>
+    <ul>
+        {% for pending in object_list %}
+            {% if not pending.resolved %}
+                <li>
+                    <a> ID: {{ pending.id }} - UserID: {{ pending.user_id }}</a> - 
+                    {% if pending.resolved %}Resolved{% else %}Resolved{% endif %}
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <h2><a href="../../">Regresar a ToDo Dashboard</a></h2>
+</body>
+</html>
